@@ -94,6 +94,7 @@ const BUILTIN_API_HOST_PROVIDERS = new Set<string>([
   ModelProviderEnum.XiaomiMiMo,
   ModelProviderEnum.LongCat,
   ModelProviderEnum.ZhipuGLMCodingPlan,
+  ModelProviderEnum.Ionet,
 ])
 
 const OAUTH_ONLY_PROVIDERS = new Set<string>([ModelProviderEnum.QwenPortal])
@@ -494,7 +495,9 @@ function ProviderSettings({ providerId }: { providerId: string }) {
     baseInfo.isCustom ||
     baseInfo.id === ModelProviderEnum.Ollama ||
     (platform.type === 'web' &&
-      (baseInfo.id === ModelProviderEnum.OpenCodeGo || baseInfo.id === ModelProviderEnum.OpenCodeZen))
+      (baseInfo.id === ModelProviderEnum.OpenCodeGo ||
+        baseInfo.id === ModelProviderEnum.OpenCodeZen ||
+        baseInfo.id === ModelProviderEnum.Ionet))
   const customApiHost = normalizeAPIHost(providerSettings, baseInfo.type)
   const azureEndpoint = normalizeAzureEndpoint(providerSettings?.endpoint || baseInfo.defaultSettings?.endpoint || '')
   const hasConnectionSettings =
