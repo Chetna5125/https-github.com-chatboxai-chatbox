@@ -261,21 +261,21 @@ Help make Chatbox accessible to more people by contributing translations:
 
 Before you begin, ensure you have the following installed:
 
-- **Node.js** (v20.x – v22.x) - [Download here](https://nodejs.org/)
-- **pnpm** (v10.x or later) - Install via `corepack enable && corepack prepare pnpm@latest --activate`
+- **Node.js** (v22.14.0; supported range `>=22.13.0 <23.0.0`) - [Download here](https://nodejs.org/)
+- **pnpm** (v10.33.0, pinned by `packageManager`) - Enable Corepack with `corepack enable`
 - **Git** - [Download here](https://git-scm.com/)
 
 ### Quick Setup
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/chatboxai/chatbox.git
-   cd chatbox
+   git clone https://github.com/Chetna5125/https-github.com-chatboxai-chatbox.git
+   cd https-github.com-chatboxai-chatbox
    ```
 
 2. **Install dependencies**
    ```bash
-   pnpm install
+   pnpm install --frozen-lockfile
    ```
 
 3. **Start development server**
